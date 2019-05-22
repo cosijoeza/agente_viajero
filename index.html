@@ -1,0 +1,83 @@
+<!DOCTYPE html>	
+	<html>	
+		<head>
+			<title>Genetico</title>
+			<meta charset="UTF-8">
+				<!--Archivos de bootstrap-->
+			  <link rel="stylesheet" href="css/material.min.css">
+			  <link rel="stylesheet" href="css/bootstrap.min.css">
+			  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+			  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+			  <script src="js/jquery-slim.min.js"></script>
+			  <script src="js/popper.min.js"></script>
+			  <script src="js/bootstrap.js"></script>
+			  <script src="js/material.min.js"></script> 
+		</head>
+		<body style="background-color: #FAFAFA">
+			<header style="background: url('img/ban_b.jpg'); height: 90px;padding-top: 25px;"><center><h1 style="color:#FFF">Agente Viajero</h1></center></header>
+			<div class="conteiner" style="height: 50px;"></div>
+			<div class="conteiner">
+				<div class="row">
+					<div class="col-1"></div>
+					<div class="col-4">
+						<!--Introducimos datos-->
+						<center>
+							<center><h2>Datos</h2></center>
+							<form>
+							  	<div class="form-group">
+								    <label for="elemets"></label>
+								    <!--Numero de ciudades-->
+								    <input type="text" class="form-control" id="ciudades" placeholder="Ciudades"/>
+								    <small  class="form-text text-muted">Inserta el numero de ciudades</small>
+								    <!--Tamaño de piblacion-->
+								    <input type="text" class="form-control" id="elementos" placeholder="Poblacion">
+								    <small  class="form-text text-muted">Inserta la cantidad de elementos que necesite tu población</small>
+								    <!--Generaciones-->
+								    <input type="text" class="form-control" id="generaciones" placeholder="Generaciones"	>
+									<small  class="form-text text-muted">Inserta el numero de generaciones</small>
+									<!--Elitismo-->
+								    <input type="text" class="form-control" id="elite" placeholder="Elitismo"	>
+									<small  class="form-text text-muted">Inserta porcentaje de elitismo</small>
+									<!--numero de elementos a mostrar-->
+								    <input type="text" class="form-control" id="mostrar" placeholder="Numero de elementos a mostrar">
+									<small  class="form-text text-muted">Cuantos elementos quieres mostrar en las tablas</small>
+									<div class="input-group mb-3">
+									  <select class="custom-select" id="tipo" >
+									    <!--<option selected>Tipo de grafo</option>-->
+									    <option value="0" selected>Disperso</option>
+									    <option value="1">Cuadrado</option>
+									    <option value="2">Circular</option>
+									  </select>									  
+									</div>
+									<small  class="form-text text-muted">Tipo de grafo</small>
+									<div class="input-group mb-3">
+									  <select class="custom-select" id="seleccion">
+									    <option selected value="0">Torneo</option>
+									    <option value="1">Ranking</option>
+									    <option value="2">Aleatorio</option>
+									  </select>
+									</div>
+									<small  class="form-text text-muted">Tipo de selección</small>
+								</div>
+								  <input type="button" class="btn btn-primary btn-lg btn-block" onclick="agente()" value="Calcula"></input>
+							</form>
+						</center>
+					</div>
+					<div class="col-2"></div>
+					<div class="col-4">
+						<center>
+							<center><h2>Ciudades</h2></center>
+							<canvas id="canvas" width="800" height="800"></canvas>
+						</center>
+					</div>
+					<div class="col-1"></div>
+				</div>
+			</div>
+			<div id="cont2">
+			</div>					
+			
+
+		</body>
+		<script type="text/javascript" src="viajero.js"></script>
+	</html>
+
